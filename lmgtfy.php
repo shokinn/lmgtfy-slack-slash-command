@@ -15,8 +15,11 @@ if($token != $tokenMatch or $token == "" or $tokenMatch == ""){
     echo $msg;
 }
 
-$longUrl = "http://lmgtfy.com/?q=".$search;
-
-$reply_json = json_encode(array('response_type'=>'in_channel','text'=>"You'll find your answer here:\n*<".$longUrl.">.*"));
+if($search == ""){
+	$reply_json = json_encode(array('response_type'=>'ephemeral','text'=>'You have to add something which the person should have to search by him or herself.'));
+} else {
+	$longUrl = "http://lmgtfy.com/?q=".$search;
+	$reply_json = json_encode(array('response_type'=>'in_channel','text'=>"You'll find your answer here:\n*<".$longUrl.">*"));
+}
 echo $reply_json;
 ?>
