@@ -10,7 +10,7 @@ $token = $_POST['token'];
 $tokenMatch = "";
 
 if($token != $tokenMatch){ 
-    $msg = "The token for the slash command doesn't match. Check your script.";
+    $msg = "{ \"error_msg\": \"The token for the slash command doesn't match. Check your script.\" }";
     die($msg);
     echo $msg;
 }
