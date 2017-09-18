@@ -2,5 +2,14 @@
 Let me google that for you bot in Slack. 
 Inspired by https://github.com/kenibarwick/lmgtfy-slack.
 
-## Usage
-Add you authentication token (the one which is genered by slack when you create a new lagacy slash command) to the php file ($tokenMatch).
+## Configuration
+
+You can specify the matching token with a environment variable or by using the `config/config.php` configuration file.
+
+### Environment variable
+
+Add the matching token by using the `SLACKSLASHCOMMANDTOKEN` environment variable.
+
+### Configuration file
+
+Copy the sample file (`config/config.sample.php`) to `config.php` and add the mathing token to the variable `$tokenMatch`.
