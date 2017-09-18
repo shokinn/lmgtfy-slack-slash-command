@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 
 //Includes
-include 'config/config.php'
+include 'config/config.php';
 
 //Variables
 $user_agent = "lmgtfy/0.1 (https://github.com/shokinn/lmgtfy-slack-slash-command)";
