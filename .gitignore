@@ -5,3 +5,6 @@
 
 # Config files
 config/config.php
+
+# CF manifest
+manifest.yml
